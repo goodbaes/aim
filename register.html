@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<script type="text/javascript">
+var extrovert= new Array('Отдаю сил больше, чем сохраняю','Больше трачу энергии, чем накапливаю','Использую информации больше, чем сберегаю','вопрос 4');
+var introvert= new Array('Сохраняю сил больше, чем отдаю','Больше сберегаю энергии, чем растрачиваю','Сберегаю информации больше, чем использую','вопрос 45');
+var i = 0;
+var b = 0;
+var a = 0;
+
+function clickButtonOne()
+    {
+    i++;
+    
+    a++;
+    if (i==extrovert.length)
+    	 result();
+  			else	go();
+  
+    }
+function clickButtonTwo()
+    {
+    i++;
+    b++;
+   
+    if (i==extrovert.length)
+    	result();
+ 		 	else
+  				go();
+    }
+
+function go()
+{
+document.getElementById('test').innerHTML=
+'<p type="button" onclick="clickButtonOne()" id="text1"></p> <br><p type="button" onclick="clickButtonTwo()" id="text2"></p>';
+document.getElementById('text1').innerHTML=extrovert[i];
+document.getElementById('text2').innerHTML=introvert[i];
+}
+
+
+function result()
+{
+ document.getElementById('test').innerHTML = '<p class="itog">В тебе интроверта <a id="introvA"></a> штук <br><br>В тебе интроверта <a id="introvB"></a> штук</p>';
+ document.getElementById('introvA').innerHTML = a;
+  document.getElementById('introvB').innerHTML = b;
+}
+
+
+</script>
+<div class="cont">
+<div class="containerTests">
+<div id="test">
+
+	
+		
+    <form action="/register" method="post">
+        <div><input type="email" class="form" placeholder="Email" /></div>
+        <div><input type="text" name="userName" class="form" placeholder="Name"/></div>
+        <div><input type="number" name="userAge" class="form" placeholder="Age"/></div>
+        <input type="submit" onclick="go();submit" id="text2" class="start">    GO  </input>
+    </form>
+</body>
+	
+</div>
+</div>
+</div>
+ 
+1 – ИЛЭ
+2 – ИЭЭ
+3 – ИЛИ
+4 – ИЭИ
+5 – СЛЭ
+6 – СЭЭ
+7 – СЛИ
+8 – СЭИ
+9 – ЛИЭ
+10 – ЛСЭ
+11 – ЛИИ
+12 – ЛСИ
+13 – ЭИЭ
+14 – ЭСЭ
+15 – ЭИИ
+16 – ЭСИ
+
+
+
+
+
+
+
+</body>
+</html>
